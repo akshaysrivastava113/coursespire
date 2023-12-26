@@ -12,6 +12,11 @@ app.use("/user", userRouter)
 
 const PORT = 3000;
 
+app.get('/', (req,res) => {
+    console.log("Home route");
+    res.send("Home route");
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
